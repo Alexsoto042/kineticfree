@@ -1,11 +1,10 @@
 <div align="center">
-  <img src="https://i.imgur.com/your-screenshot.png" alt="Kinetic Screenshot" width="800"/>
+  <img src="icons/icon-512.webp" alt="Kinetic Logo" width="250"/>
 
   # Kinetic: Open-Source Fitness OS 🚀
 
   **Kinetic** es un sistema operativo integral para el seguimiento de tu actividad física, diseñado para ser rápido, limpio y completamente gratuito para desplegar. 
   
-  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTU-USUARIO%2Fkinetic)
 </div>
 
 ---
