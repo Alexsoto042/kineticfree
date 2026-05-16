@@ -1,0 +1,29 @@
+.nutrition-summary-container {
+  margin-bottom: 2rem;
+}
+
+.nutrition-summary-container h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.summary-item .value {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  color: var(--ion-color-primary);
+}
+
+.summary-item .label {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium-shade);
+}

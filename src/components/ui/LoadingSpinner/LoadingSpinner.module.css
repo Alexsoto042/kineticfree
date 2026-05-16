@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+}
+
+.spinner {
+  position: relative;
+  display: inline-block;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 3px solid var(--color-border, #e0e0e0);
+  border-top-color: var(--color-primary, #007bff);
+  animation: spin 0.8s linear infinite;
+  will-change: transform;
+}
+
+/* Size variants */
+.small .circle {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.medium .circle {
+  width: 40px;
+  height: 40px;
+  border-width: 3px;
+}
+
+.large .circle {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation-duration: 1.5s;
+  }
+}

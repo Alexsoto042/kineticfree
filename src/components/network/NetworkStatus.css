@@ -1,0 +1,114 @@
+/* Network Status Component Styles */
+
+.network-status {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-index-sticky);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: var(--shadow-elevation-medium);
+  animation: slideDown 0.3s ease-out;
+  font-size: var(--font-size-small);
+}
+
+.network-status.offline {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.network-status.syncing {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.network-status-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.network-icon {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.network-icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+.network-text {
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+}
+
+.sync-now-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.sync-now-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.sync-now-btn:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .network-status {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+  }
+
+  .network-icon {
+    font-size: 1rem;
+  }
+
+  .sync-now-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Adjust main content when network status is visible */
+body:has(.network-status) main {
+  padding-top: calc(var(--spacing-md) + 40px);
+}
+
+/* Native app adjustments */
+body.native-app:has(.network-status) main {
+  padding-top: calc(var(--spacing-md) + 40px + env(safe-area-inset-top));
+}

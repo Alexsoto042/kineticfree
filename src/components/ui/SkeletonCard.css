@@ -1,0 +1,81 @@
+/* src/components/SkeletonCard.css */
+.skeleton-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-surface);
+}
+
+.skeleton-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 24px;
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 16px;
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-text.short {
+  width: 50%;
+}
+
+.skeleton-badges {
+  width: 80%;
+  height: 20px;
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Shimmer Animation */
+.skeleton-card > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card > div::after,
+.skeleton-content > div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}

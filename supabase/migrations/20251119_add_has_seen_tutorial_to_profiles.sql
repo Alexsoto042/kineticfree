@@ -1,0 +1,2 @@
+ALTER TABLE profiles
+ADD COLUMN has_seen_tutorial BOOLEAN DEFAULT FALSE;

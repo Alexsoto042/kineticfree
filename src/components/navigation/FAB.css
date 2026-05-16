@@ -1,0 +1,42 @@
+/* FAB (Floating Action Button) Styles */
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: #121212;
+  border: none;
+  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.4);
+  position: relative;
+  top: -20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(var(--color-primary-rgb), 0.5);
+}
+
+.fab:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 2px 8px rgba(var(--color-primary-rgb), 0.3);
+}
+
+/* Animation for icon changes */
+.fab svg {
+  transition: transform 0.2s ease;
+}
+
+.fab:active svg {
+  transform: scale(0.9);
+}
+
+/* Ensure FAB is visible on native apps */
+body.native-app .fab {
+  margin-bottom: env(safe-area-inset-bottom);
+}

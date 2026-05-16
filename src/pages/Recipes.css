@@ -1,0 +1,140 @@
+/* src/pages/Recipes.css */
+
+/* General container for the recipes page */
+.recipes-section { /* Changed from .recipes-container to .recipes-section */
+  padding: var(--spacing-lg);
+  padding-bottom: 80px; /* Space for bottom nav bar */
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface); /* Ensure it has a background */
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-elevation-medium);
+  border: 1px solid var(--color-border);
+}
+
+/* Header Section */
+.recipes-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-md);
+  background: var(--color-surface); /* Changed to lighter background */
+  color: var(--color-text-primary); /* Changed to dark text for readability */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-elevation-low);
+  border: 1px solid var(--color-border); /* Added border for definition */
+}
+
+.recipes-header h1 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-text-primary); /* Ensure heading is dark on light background */
+}
+
+.recipes-header p {
+  font-size: var(--font-size-p);
+  opacity: 0.9;
+  line-height: var(--line-height-base);
+  color: var(--color-text-secondary); /* Ensure paragraph is readable */
+}
+
+/* Filter Buttons */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.filter-container button {
+  background-color: var(--color-background); /* Lighter background for buttons */
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: var(--font-size-p);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-elevation-low);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.filter-container button:hover:not(.active) {
+  background-color: var(--color-surface); /* Subtle change on hover */
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.filter-container button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-elevation-medium);
+  transform: translateY(-1px);
+  font-weight: 700;
+}
+
+/* Recipe List Grid */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjusted minmax for slightly larger horizontal cards */
+  gap: var(--spacing-xl);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .recipes-section {
+    padding: var(--spacing-md);
+  }
+
+  .recipes-header {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .recipes-header h1 {
+    font-size: var(--font-size-h3);
+  }
+
+  .recipes-header p {
+    font-size: var(--font-size-small);
+  }
+
+  .filter-container {
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .filter-container button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-small);
+  }
+
+  .recipe-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+/* Error and Loading Messages */
+.error-message {
+  color: var(--color-danger);
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  font-size: var(--font-size-p);
+  font-weight: 500;
+}
+
+.recipes-section p {
+  text-align: center;
+  font-size: var(--font-size-p);
+  color: var(--color-text-secondary);
+}

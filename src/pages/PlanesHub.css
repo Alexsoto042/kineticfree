@@ -1,0 +1,347 @@
+/* PlanesHub.css */
+.planes-hub-container {
+  padding: var(--spacing-lg);
+  padding-bottom: calc(var(--spacing-xl) + 60px); /* Space for bottom nav */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.planes-hub-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.planes-hub-header h1 {
+  font-size: var(--font-size-xxlarge);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.planes-hub-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+/* Section Header with Badge */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.plan-active-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-success);
+  color: white;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+}
+
+/* Current Plan Section */
+.current-plan-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.current-plan-section h2 {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.current-plan-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-elevation-low);
+  border: 1px solid var(--color-border);
+}
+
+.plan-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.plan-card-header h3 {
+  font-size: var(--font-size-xlarge);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.plan-week-badge {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.plan-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--color-background);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.plan-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--border-radius-full);
+  transition: width 0.3s ease;
+}
+
+.plan-description {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.btn-start-workout {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-start-workout:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.view-plan-details {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: var(--spacing-sm);
+  transition: color 0.2s ease;
+}
+
+.view-plan-details:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Explore Plans Section */
+.explore-plans-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.explore-plans-section h2 {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.explore-plans-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+}
+
+.explore-plans-link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-background);
+}
+
+.explore-plans-link svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.explore-plans-link h3 {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.explore-plans-link p {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+/* No Plan Section */
+.no-plan-section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.no-plan-card {
+  text-align: center;
+  padding: var(--spacing-xxl);
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.no-plan-icon {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  margin-bottom: var(--spacing-lg);
+}
+
+.no-plan-card h2 {
+  font-size: var(--font-size-xlarge);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.no-plan-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.no-plan-benefits {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: center;
+  min-width: 100px;
+}
+
+.benefit-icon {
+  font-size: 2rem;
+}
+
+.benefit-item span:last-child {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.btn-explore-plans {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-explore-plans:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.help-text {
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planes-hub-container {
+    padding: var(--spacing-md);
+  }
+
+  .plan-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plan-week-badge {
+    align-self: flex-start;
+  }
+}
+
+/* Other Plans Section */
+.other-plans-section,
+.available-plans-section {
+  margin-top: var(--spacing-xxl);
+}
+
+.other-plans-section h2,
+.available-plans-section h2 {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.plan-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.plan-link:hover {
+  transform: translateY(-4px);
+}
+
+.view-all-plans {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: var(--spacing-md);
+  transition: color 0.2s ease;
+}
+
+.view-all-plans:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}

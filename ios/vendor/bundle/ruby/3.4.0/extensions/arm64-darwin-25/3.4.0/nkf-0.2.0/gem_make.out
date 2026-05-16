@@ -1,0 +1,18 @@
+current directory: /Users/alex/Documents/gemini/ios/vendor/bundle/ruby/3.4.0/gems/nkf-0.2.0/ext/nkf
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/alex/Documents/gemini/ios/vendor/bundle/ruby/3.4.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20251109-36041-34akqd sitelibdir\=./.gem.20251109-36041-34akqd clean
+
+current directory: /Users/alex/Documents/gemini/ios/vendor/bundle/ruby/3.4.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20251109-36041-34akqd sitelibdir\=./.gem.20251109-36041-34akqd
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/alex/Documents/gemini/ios/vendor/bundle/ruby/3.4.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20251109-36041-34akqd sitelibdir\=./.gem.20251109-36041-34akqd install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20251109-36041-34akqd
+
+current directory: /Users/alex/Documents/gemini/ios/vendor/bundle/ruby/3.4.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20251109-36041-34akqd sitelibdir\=./.gem.20251109-36041-34akqd clean

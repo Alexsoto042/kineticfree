@@ -1,0 +1,732 @@
+/* src/index.css */
+@import './styles/ui-improvements.css';
+@import './styles/utilities.css';
+@import './styles/accessibility.css';
+@import './styles/breakpoints.css';
+
+:root {
+  /* ==========================================================================
+     Design System: Spacing & Sizing
+     Base unit: 1rem (16px)
+     ========================================================================== */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* ==========================================================================
+     Design System: Typography
+     ========================================================================== */
+  --font-family-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+
+  /* Tipografía fluida - se adapta automáticamente al viewport */
+  --font-size-h1: clamp(2rem, 5vw, 2.5rem);
+  --font-size-h2: clamp(1.75rem, 4vw, 2rem);
+  --font-size-h3: clamp(1.5rem, 3.5vw, 1.75rem);
+  --font-size-h4: clamp(1.125rem, 2.5vw, 1.25rem);
+  --font-size-p: 1rem;
+  --font-size-small: 0.875rem;
+
+  /* ==========================================================================
+     Design System: Colors
+     ========================================================================== */
+
+  /* Light Theme (Default) */
+  --color-background: #f8f9fa; /* Very light grey */
+  --color-surface: #ffffff; /* White for cards, modals, etc. */
+  --color-border: #dee2e6; /* Slightly darker for better contrast */
+  --color-text-primary: #212529; /* Dark text */
+  --color-text-secondary: #6c757d; /* Muted text */
+
+  --color-primary: #00e676; /* Vibrant Green */
+  --color-primary-hover: #00c853; /* Darker Green */
+  --color-primary-rgb: 0, 230, 118;
+
+  --color-secondary: #6c757d;
+  --color-secondary-hover: #5a6268;
+
+  --color-success: #28a745;
+  --color-success-rgb: 40, 167, 69;
+  --color-danger: #dc3545;
+  --color-danger-hover: #c82333;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+
+  --color-disabled: #cccccc;
+
+  --color-accent: var(--color-primary); /* Added for chart lines */
+
+  /* Tag Colors */
+  --color-tag-strength: #3498db;
+  --color-tag-cardio: #e74c3c;
+  --color-tag-flexibility: #2ecc71;
+  --color-tag-hybrid: #e67e22;
+  --color-tag-core: #9b59b6;
+  --color-tag-upper: #4682b4;
+  --color-tag-lower: #d2691e;
+  --color-tag-full_body: #20b2aa;
+  --color-tag-muscle_gain: #27ae60;
+  --color-tag-endurance: #3498db;
+  --color-tag-general_fitness: #8e44ad;
+
+  /* On-colors for text that sits on top of background/surface */
+  --on-background-color: var(--color-text-primary);
+  --on-surface-color: var(--color-text-primary);
+
+  /* Shadows */
+  --shadow-elevation-low:
+    0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-medium:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-elevation-high:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* ==========================================================================
+     Design System: Z-Index Hierarchy
+     ========================================================================== */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  /* ==========================================================================
+     Design System: Button Sizes
+     ========================================================================== */
+  --button-height-sm: 32px;
+  --button-height-md: 40px;
+  --button-height-lg: 48px;
+  --button-padding-sm: 0.5rem 1rem;
+  --button-padding-md: 0.75rem 1.5rem;
+  --button-padding-lg: 1rem 2rem;
+
+  /* ==========================================================================
+     Design System: Touch Targets (Mobile)
+     ========================================================================== */
+  --touch-target-min: 44px;
+  --input-height-mobile: 48px;
+}
+
+html.dark {
+  /* Dark Theme */
+  --color-background: #121212; /* Off-black for better comfort */
+  --color-surface: #1e1e1e; /* Dark grey for cards, distinct from background */
+  --color-border: #333333; /* Darker border */
+  --color-text-primary: #f8f9fa; /* Light text */
+  --color-text-secondary: #a0a0a0; /* Muted light text */
+
+  --color-primary: #00e676; /* Vibrant Green */
+  --color-primary-hover: #00c853; /* Darker Green */
+  --color-secondary: #495057;
+  --color-secondary-hover: #343a40;
+
+  --color-danger: #e57373;
+  --color-danger-hover: #ef5350;
+  --color-success: #81c784;
+  --color-warning: #ffd54f;
+  --color-info: #4dd0e1;
+
+  --color-disabled: #555555;
+
+  --color-accent: var(--color-primary); /* Added for chart lines */
+
+  --on-background-color: var(--color-text-primary);
+  --on-surface-color: var(--color-text-primary);
+}
+
+
+
+/* ==========================================================================
+   Base & Typography Styles
+   ========================================================================== */
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--on-surface-color);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--on-surface-color);
+  font-weight: 700; /* Bolder headings */
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+h4 {
+  font-size: var(--font-size-h4);
+}
+p {
+  font-size: var(--font-size-p);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+/* Remove default browser margin from body and list from ul, ol */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   Generic Form Component Styles
+   ========================================================================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-background);
+  color: var(--on-surface-color);
+  font-size: var(--font-size-p);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.3);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-text {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.input-error {
+  border-color: var(--color-danger) !important;
+}
+
+.error-message {
+  color: var(--color-danger);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-xs);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Mobile-First Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.125rem;
+    --font-size-p: 0.95rem;
+
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 1.75rem;
+  }
+
+  body {
+    /* Improve touch interaction feedback on mobile */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .btn {
+    /* Make buttons easier to tap on mobile */
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .card-content {
+    padding: var(--spacing-md);
+  }
+}
+
+/* ==========================================================================
+   ANDROID NATIVE STYLES (CAPACITOR)
+   These styles will ONLY apply when the app is running on Android.
+   ========================================================================== */
+.plt-android {
+  /* 1. Use Android's default system font for a native feel */
+  --font-family-base:
+    'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    Arial, sans-serif;
+
+  /* 2. Add padding to account for system status/navigation bars */
+  body {
+    padding-top: env(safe-area-inset-top, 24px);
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+    padding-left: env(safe-area-inset-left, 16px);
+    padding-right: env(safe-area-inset-right, 16px);
+  }
+
+  /* 3. Add native-like elevation to header and bottom nav bar */
+  .app-header,
+  .bottom-nav-bar {
+    box-shadow: var(--shadow-elevation-medium);
+  }
+
+  /* 4. Adjust card styling for a more modern, native look */
+  .card-base {
+    border-radius: var(--border-radius-lg); /* Slightly larger radius */
+    border: none; /* Remove border in favor of shadow */
+    box-shadow: var(--shadow-elevation-low);
+  }
+
+  .card-base:hover {
+    box-shadow: var(--shadow-elevation-medium);
+    transform: none; /* Disable hover transform on mobile for better performance */
+  }
+
+  /* 5. Improve touch feedback on buttons with a ripple-like effect */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent; /* Disable the default grey tap highlight */
+  }
+
+  .btn:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: ripple 0.6s linear forwards;
+  }
+
+  @keyframes ripple {
+    to {
+      transform: translate(-50%, -50%) scale(150);
+      opacity: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+   Native App Overrides
+   Applied when body has class 'native-app' (injected by App.tsx)
+   ========================================================================== */
+
+body.native-app {
+  /* Prevent scrolling on body, let main container scroll if needed */
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide the Web Header on Native */
+body.native-app .app-header {
+  display: none !important;
+}
+
+/* Adjust Main Content Spacing */
+body.native-app main {
+  /* Remove top padding usually reserved for fixed header */
+  padding-top: var(--spacing-md) !important; 
+  /* Add bottom padding for BottomNavBar + Safe Area */
+  padding-bottom: calc(60px + env(safe-area-inset-bottom) + var(--spacing-md)) !important;
+}
+
+/* Adjust Bottom Navigation Bar for Native */
+body.native-app .bottom-nav-bar {
+  /* Add padding for Home Indicator (iPhone X+) */
+  padding-bottom: env(safe-area-inset-bottom);
+  height: calc(60px + env(safe-area-inset-bottom));
+  
+  /* Add a subtle shadow/border for better separation */
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Adjust Dashboard Container for Native */
+body.native-app .dashboard-container {
+  padding: var(--spacing-md);
+}
+
+/* Hide Theme Toggle in Header (since header is hidden) 
+   We might want to move this to Profile page later */
+   
+/* Mobile Top Bar (New Component) Styles */
+.mobile-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-xs) 0;
+}
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.mobile-greeting {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-greeting h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.mobile-greeting span {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.mobile-avatar-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mobile-avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-primary);
+}
+
+.mobile-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.mobile-action-btn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-action-btn:active {
+  transform: scale(0.95);
+  background-color: var(--color-background);
+}
+
+/* ==========================================================================
+   Mobile Design Overhaul (Phase 2)
+   Specific page overrides for Native App
+   ========================================================================== */
+
+/* --- Explore Plans --- */
+body.native-app .explore-header {
+  display: none !important;
+}
+
+body.native-app .explore-plans-container {
+  padding: 0 !important;
+}
+
+body.native-app .section-tabs {
+  display: flex;
+  background-color: var(--color-surface);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+body.native-app .section-tabs button {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+body.native-app .section-tabs button.active {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-elevation-low);
+}
+
+body.native-app .plans-grid {
+  grid-template-columns: 1fr !important; /* Force single column */
+  gap: var(--spacing-md);
+}
+
+body.native-app .plan-card {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* --- Nutrition --- */
+body.native-app .nutrition-container > h1 {
+  display: none; /* Hide main title */
+}
+
+body.native-app .nutrition-container {
+  padding: 0 !important;
+}
+
+body.native-app .food-tracker-section.card-base,
+body.native-app .summary-section.card-base {
+  padding: var(--spacing-md); /* Reduce padding */
+  margin-bottom: var(--spacing-md);
+}
+
+body.native-app .search-form {
+  flex-direction: column; /* Stack input and button */
+  gap: var(--spacing-sm);
+}
+
+body.native-app .search-input {
+  width: 100%;
+  padding: var(--spacing-md); /* Larger touch target */
+}
+
+body.native-app .macros-grid {
+  gap: var(--spacing-sm);
+}
+
+body.native-app .macro-item {
+  padding: var(--spacing-sm);
+}
+
+/* --- Profile --- */
+body.native-app .profile-container {
+  padding: 0 !important;
+}
+
+body.native-app .profile-header {
+  /* Simplify header */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+body.native-app .profile-header h1 {
+  font-size: 1.5rem;
+  margin-top: var(--spacing-sm);
+}
+
+body.native-app .user-avatar {
+  width: 80px;
+  height: 80px;
+}
+
+/* Scrollable Tabs for Profile */
+body.native-app .tabs-header {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+body.native-app .tabs-header::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+body.native-app .tab-button {
+  flex: 0 0 auto; /* Don't shrink */
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-right: var(--spacing-sm);
+  border-bottom: 2px solid transparent;
+}
+
+body.native-app .tab-button.active {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Profile Grid to Column */
+body.native-app .profile-grid {
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md);
+}
+
+body.native-app .profile-sidebar {
+  order: -1; /* Show stats on top if desired, or keep at bottom */
+}
+
+/* --- General Mobile Adjustments --- */
+body.native-app .card-base {
+  border-radius: var(--border-radius-md); /* Slightly smaller radius */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Flatter look */
+}
+
+body.native-app h2 {
+  font-size: 1.25rem; /* Smaller section headings */
+}
+
+
+/* --- Routines --- */
+body.native-app .routine-list {
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md);
+}
+
+/* --- Motivation Wall --- */
+body.native-app .motivation-wall-layout {
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md);
+}
+
+body.native-app .motivation-wall-header {
+  display: none !important;
+}
+
+body.native-app .motivation-wall-left-column {
+  order: -1; /* Keep creator at top */
+  margin-bottom: var(--spacing-md);
+}
+
+body.native-app .motivation-feed-item {
+  margin-bottom: var(--spacing-md);
+}
+
+/* --- Workout Player --- */
+body.native-app .workout-player-container {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.native-app .workout-header {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+body.native-app .workout-header h1 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+body.native-app .player-main-grid {
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md);
+  flex: 1; /* Allow it to grow */
+  overflow-y: auto; /* Scroll if content is too long */
+}
+
+body.native-app .current-exercise-container,
+body.native-app .set-logger-container,
+body.native-app .rest-timer-container {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+body.native-app .workout-navigation {
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--spacing-md);
+  position: sticky;
+  bottom: calc(60px + env(safe-area-inset-bottom)); /* Lift above bottom nav */
+  padding-bottom: var(--spacing-sm);
+  z-index: 10;
+}
+
+body.native-app .workout-navigation button {
+  flex: 1;
+  padding: var(--spacing-md); /* Larger touch target */
+}
+
+body.native-app .workout-controls {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  background: var(--color-surface);
+}
+
+body.native-app .workout-controls button {
+  width: 100%;
+  padding: var(--spacing-md);
+}

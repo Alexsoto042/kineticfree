@@ -1,0 +1,72 @@
+/* src/components/routines/RoutineCard.css */
+
+.routine-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-elevation-low);
+  transition: all 0.3s ease;
+  height: 100%;
+  max-width: 100%; /* Ensure it doesn't overflow its parent */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.routine-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevation-medium);
+  border-color: var(--color-primary);
+}
+
+.routine-card__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.routine-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--spacing-sm); /* Reduced margin */
+}
+
+.routine-card__header h3 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly smaller title */
+  color: var(--color-text-primary);
+}
+
+.routine-card__header svg {
+  color: var(--color-primary);
+  width: 24px; /* Explicit width */
+  height: 24px; /* Explicit height */
+  min-width: 24px; /* Ensure it doesn't shrink */
+  min-height: 24px; /* Ensure it doesn't shrink */
+}
+
+.routine-card__description {
+  font-size: 0.9rem; /* Smaller description font */
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-sm); /* Reduced margin */
+}
+
+.routine-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs); /* Tighter gap */
+  margin-top: auto;
+}
+
+.routine-card__meta-item {
+  padding: 4px 8px; /* Smaller tags */
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}

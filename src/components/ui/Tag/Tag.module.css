@@ -1,0 +1,130 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Exercise Categories */
+.strength {
+  background-color: rgba(255, 82, 82, 0.15);
+  color: #ff5252;
+  border: 1px solid rgba(255, 82, 82, 0.2);
+}
+
+.cardio {
+  background-color: rgba(33, 150, 243, 0.15);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.flexibility {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.hybrid {
+  background-color: rgba(156, 39, 176, 0.15);
+  color: #9c27b0;
+  border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+/* Body Zones */
+.pecho {
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.espalda {
+  background-color: rgba(63, 81, 181, 0.15);
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.2);
+}
+
+.piernas, .cuadriceps, .isquiotibiales, .gemelos {
+  background-color: rgba(0, 150, 136, 0.15);
+  color: #009688;
+  border: 1px solid rgba(0, 150, 136, 0.2);
+}
+
+.hombros {
+  background-color: rgba(121, 85, 72, 0.15);
+  color: #795548;
+  border: 1px solid rgba(121, 85, 72, 0.2);
+}
+
+.brazos, .biceps, .triceps {
+  background-color: rgba(233, 30, 99, 0.15);
+  color: #e91e63;
+  border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.core, .abdominales {
+  background-color: rgba(96, 125, 139, 0.15);
+  color: #607d8b;
+  border: 1px solid rgba(96, 125, 139, 0.2);
+}
+
+.full_body, .cuerpo_completo {
+  background-color: rgba(103, 58, 183, 0.15);
+  color: #673ab7;
+  border: 1px solid rgba(103, 58, 183, 0.2);
+}
+
+/* Routine Difficulties */
+.beginner {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.intermediate {
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.advanced {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+/* Routine Goals */
+.muscle_gain {
+  background-color: rgba(33, 150, 243, 0.15);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.weight_loss {
+  background-color: rgba(233, 30, 99, 0.15);
+  color: #e91e63;
+  border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.endurance {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.general_fitness {
+  background-color: rgba(156, 39, 176, 0.15);
+  color: #9c27b0;
+  border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+/* Default fallback */
+.default {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}

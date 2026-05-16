@@ -1,0 +1,123 @@
+/* src/components/goals/Goals.css */
+
+.goals-container {
+  background-color: var(--color-background-soft);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.goals-container h2 {
+  margin-top: 0;
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.goal-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.goal-form input,
+.goal-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.goal-form input[type='text'] {
+  flex-grow: 1; /* Allows description to take more space */
+}
+
+.goal-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.goal-form button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.goal-list {
+  display: grid;
+  gap: 15px;
+}
+
+.goal-item {
+  background-color: var(--color-background);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.goal-item p {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.goal-item progress {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+/* Styling for progress bar */
+.goal-item progress::-webkit-progress-bar {
+  background-color: var(--color-background-soft);
+  border-radius: 5px;
+}
+
+.goal-item progress::-webkit-progress-value {
+  background-color: var(--color-accent);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.goal-item progress::-moz-progress-bar {
+  background-color: var(--color-accent);
+  border-radius: 5px;
+}
+
+.goal-item span {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.goal-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.goal-actions button {
+  padding: 5px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-background-soft);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.goal-actions button.delete-btn {
+  border-color: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.goal-actions button.delete-btn:hover {
+  background-color: var(--color-danger-soft);
+  color: white;
+}

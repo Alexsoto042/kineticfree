@@ -1,0 +1,163 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* src/App.css */
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--on-background-color);
+  
+  /* Safe area padding for notched devices (only bottom and sides) */
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+/* Native app specific styles */
+.native-app .app-container {
+  /* Add padding to avoid camera/notch overlap */
+  padding-top: 40px; /* Clearance for camera/notch */
+}
+
+.native-app main {
+  /* Additional top padding for native apps */
+  padding-top: calc(1.5rem + 20px);
+}
+main {
+  flex-grow: 1;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container for pages that need padding and max-width (not Landing/Login) */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.filters-container-group,
+.exercise-list,
+.routine-list {
+  width: 100%; /* Ensure these take full width to be centered */
+}
+
+/* --- Filtros --- */
+.filters-container-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: var(--spacing-lg); /* Added this line */
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--on-background-color);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: var(--on-background-color);
+  border-color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+/* --- Listas --- */
+.exercise-list,
+.routine-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem 0.5rem; /* Reduce horizontal padding even more */
+    padding-bottom: 90px; /* Add padding to prevent overlap with bottom nav */
+  }
+
+  .exercise-list,
+  .routine-list {
+    /* Switch to a single column layout sooner on mobile for a cleaner look */
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .filters-container {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1rem; /* Adjust padding */
+    font-size: 0.9rem;
+  }
+
+  .mobile-hidden-filters {
+    display: none;
+  }
+}
+
+/* This media query might be redundant now, but we can keep it for very small screens if needed */
+@media (max-width: 480px) {
+  main {
+    padding: 1rem 0.25rem;
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "timestamp": "2025-12-13T19:58:32.258Z",
+  "total": 38,
+  "success": 22,
+  "failed": 16,
+  "results": [
+    {
+      "filename": "132_Flexiones Diamante (Diamond Push-ups).mp4",
+      "exerciseId": 132,
+      "exerciseName": "Flexiones Diamante (Diamond Push-ups)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_132.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/132_converted.webm"
+    },
+    {
+      "filename": "133_Flexiones Declinadas (Decline Push-ups).mp4",
+      "exerciseId": 133,
+      "exerciseName": "Flexiones Declinadas (Decline Push-ups)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_133.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/133_converted.webm"
+    },
+    {
+      "filename": "134_Flexiones con Palmada (Clap Push-ups).mp4",
+      "exerciseId": 134,
+      "exerciseName": "Flexiones con Palmada (Clap Push-ups)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_134.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/134_converted.webm"
+    },
+    {
+      "filename": "144_Pájaros (Rear Delt Fly).mp4",
+      "exerciseId": 144,
+      "exerciseName": "Pájaros (Rear Delt Fly)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_144.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/144_converted.webm"
+    },
+    {
+      "filename": "146_Fondos en Banco (Bench Dips).mp4",
+      "exerciseId": 146,
+      "exerciseName": "Fondos en Banco (Bench Dips)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_146.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/146_converted.webm"
+    },
+    {
+      "filename": "150_Extensión de Tríceps Acostado (Skull Crushers).mp4",
+      "exerciseId": 150,
+      "exerciseName": "Extensión de Tríceps Acostado (Skull Crushers)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_150.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/150_converted.webm"
+    },
+    {
+      "filename": "155_Hack Squat.mp4",
+      "exerciseId": 155,
+      "exerciseName": "Hack Squat",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_155.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/155_converted.webm"
+    },
+    {
+      "filename": "159_Mountain Climbers (Escaladores).mp4",
+      "exerciseId": 159,
+      "exerciseName": "Mountain Climbers (Escaladores)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_159.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/159_converted.webm"
+    },
+    {
+      "filename": "163_Jumping Jacks (Saltos de Tijera).mp4",
+      "exerciseId": 163,
+      "exerciseName": "Jumping Jacks (Saltos de Tijera)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_163.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/163_converted.webm"
+    },
+    {
+      "filename": "164_High Knees (Rodillas Altas).mp4",
+      "exerciseId": 164,
+      "exerciseName": "High Knees (Rodillas Altas)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_164.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/164_converted.webm"
+    },
+    {
+      "filename": "177_Natación (Swimming).mp4",
+      "exerciseId": 177,
+      "exerciseName": "Natación (Swimming)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_177.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/177_converted.webm"
+    },
+    {
+      "filename": "180_Marcha en Sitio (Marching in Place).mp4",
+      "exerciseId": 180,
+      "exerciseName": "Marcha en Sitio (Marching in Place)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_180.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/180_converted.webm"
+    },
+    {
+      "filename": "182_Estiramiento de Hombros.mp4",
+      "exerciseId": 182,
+      "exerciseName": "Estiramiento de Hombros",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_182.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/182_converted.webm"
+    },
+    {
+      "filename": "183_Estiramiento de Tríceps.mp4",
+      "exerciseId": 183,
+      "exerciseName": "Estiramiento de Tríceps",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_183.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/183_converted.webm"
+    },
+    {
+      "filename": "184_Estiramiento de Espalda Baja.mp4",
+      "exerciseId": 184,
+      "exerciseName": "Estiramiento de Espalda Baja",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_184.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/184_converted.webm"
+    },
+    {
+      "filename": "185_Estiramiento de Glúteos.mp4",
+      "exerciseId": 185,
+      "exerciseName": "Estiramiento de Glúteos",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_185.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/185_converted.webm"
+    },
+    {
+      "filename": "186_Estiramiento de Pantorrillas.mp4",
+      "exerciseId": 186,
+      "exerciseName": "Estiramiento de Pantorrillas",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_186.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/186_converted.webm"
+    },
+    {
+      "filename": "188_Estiramiento de Psoas (Hip Flexor Stretch).mp4",
+      "exerciseId": 188,
+      "exerciseName": "Estiramiento de Psoas (Hip Flexor Stretch)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_188.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/188_converted.webm"
+    },
+    {
+      "filename": "197_Muscle-up.mp4",
+      "exerciseId": 197,
+      "exerciseName": "Muscle-up",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_197.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/197_converted.webm"
+    },
+    {
+      "filename": "198_L-Sit.mp4",
+      "exerciseId": 198,
+      "exerciseName": "L-Sit",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_198.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/198_converted.webm"
+    },
+    {
+      "filename": "199_Handstand Push-up (Flexión en Pino).mp4",
+      "exerciseId": 199,
+      "exerciseName": "Handstand Push-up (Flexión en Pino)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_199.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/199_converted.webm"
+    },
+    {
+      "filename": "201_Front Lever.mp4",
+      "exerciseId": 201,
+      "exerciseName": "Front Lever",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/exercise_201.webm",
+      "localPath": "/Users/alex/Documents/gemini/scripts/converted_webm/201_converted.webm"
+    },
+    {
+      "filename": "Estiramiento de Espalda Baja.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Estiramiento de Glúteos.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Estiramiento de Hombros.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Estiramiento de Pantorrillas.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Estiramiento de Psoas (Hip Flexor Stretch).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Estiramiento de Tríceps.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Extensión de Tríceps Acostado (Skull Crushers).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Flexiones Declinadas (Decline Push-ups).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Flexiones Diamante (Diamond Push-ups).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Flexiones con Palmada (Clap Push-ups).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Fondos en Banco (Bench Dips).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Front Lever.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Hack Squat.mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Handstand Push-up (Flexión en Pino).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "High Knees (Rodillas Altas).mp4",
+      "status": "invalid_filename"
+    },
+    {
+      "filename": "Jumping Jacks (Saltos de Tijera).mp4",
+      "status": "invalid_filename"
+    }
+  ]
+}

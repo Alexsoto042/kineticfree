@@ -1,0 +1,264 @@
+/* src/components/Header.css */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+}
+
+.app-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.title-container {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+}
+
+.logo-container h1 {
+  font-size: var(--font-size-h3);
+  margin: 0;
+  color: var(--on-surface-color);
+}
+
+.app-version {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.right-side-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* --- Desktop Navigation --- */
+.desktop-nav {
+  display: none; /* Hidden on mobile by default */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-p);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* --- Header Actions (Theme Toggle, etc.) --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Desktop Avatar Styles */
+.desktop-avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Smaller for desktop */
+  height: 32px; /* Smaller for desktop */
+  border-radius: 50%;
+  overflow: hidden;
+  color: var(--color-text-secondary);
+}
+
+.desktop-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.theme-toggle,
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  color: var(--on-surface-color);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.mobile-menu-toggle:hover {
+  background-color: var(--color-background);
+}
+
+/* --- Mobile Navigation Panel --- */
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-elevation-high);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+}
+
+.mobile-nav-panel.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.mobile-nav-links .nav-link {
+  font-size: var(--font-size-h4);
+  width: 100%;
+}
+
+.mobile-nav-footer {
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1999;
+  pointer-events: none;
+}
+
+.nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Media Queries --- */
+@media (min-width: 992px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .app-header {
+    display: flex; /* Make header visible on mobile */
+    padding: var(--spacing-sm) var(--spacing-md); /* Adjust padding for mobile */
+    padding-top: calc(var(--spacing-md) + env(safe-area-inset-top)); /* Add dynamic padding for status bar */
+  }
+
+  .desktop-nav {
+    display: none; /* Ensure desktop nav is hidden */
+  }
+
+  .mobile-menu-toggle {
+    display: none; /* Ensure mobile menu toggle is hidden */
+  }
+
+  .mobile-profile-link {
+    display: flex; /* Show the new profile link */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: var(--color-text-secondary);
+  }
+
+  .mobile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header-actions {
+    gap: var(--spacing-sm);
+  }
+
+  /* Hide the mobile nav panel as we are using bottom nav bar */
+  .mobile-nav-panel,
+  .nav-backdrop {
+    display: none;
+  }
+
+  .logo-container h1 {
+    font-size: var(--font-size-h4);
+  }
+}
+
+/* --- Streak Display --- */
+.streak-display {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-primary); /* Changed to primary text color */
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-background-secondary); /* Use a secondary background */
+  border-radius: var(--border-radius-md);
+  cursor: default; /* It's not a link */
+  border: 1px solid var(--color-border);
+}
+
+.streak-display:hover {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,17 @@
+# Ignore build output and dependencies
+node_modules
+dist
+android/
+ios/
+
+# Ignore package manager lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore miscellaneous
+.DS_Store

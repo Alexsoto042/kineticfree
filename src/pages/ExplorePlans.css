@@ -1,0 +1,227 @@
+/* src/pages/ExplorePlans.css */
+
+.explore-plans-container {
+  padding: 30px 20px;
+  max-width: 1300px; /* Slightly wider container */
+  margin: 0 auto;
+}
+
+.explore-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.explore-header h1 {
+  font-size: 3rem; /* Larger heading */
+  color: var(--color-text-primary);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.explore-header p {
+  font-size: 1.2rem; /* Slightly larger paragraph */
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.goal-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Tighter gap */
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.goal-filters button {
+  padding: 12px 25px; /* More padding */
+  border: 2px solid var(--color-border); /* Thicker border */
+  border-radius: 30px; /* More rounded, pill-like */
+  background-color: var(--color-background-alt);
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.goal-filters button:hover {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.goal-filters button.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  ); /* Slightly wider cards */
+  gap: 30px; /* More spacing between cards */
+}
+
+.plan-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-tabs button {
+  padding: 15px 30px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.section-tabs button:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary-soft);
+}
+
+.section-tabs button.active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Plan Card Wrapper */
+.plan-card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Activate Plan Button */
+.btn-activate-plan {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-activate-plan:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.btn-activate-plan:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Current Plan Badge */
+.current-plan-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-success);
+  color: white;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.current-plan-badge svg {
+  flex-shrink: 0;
+}
+
+/* Recommended Plan Badge */
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+/* Plan Actions Container */
+.plan-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Save Plan Button */
+.btn-save-plan {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-background-alt);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.btn-save-plan:hover:not(:disabled) {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.btn-save-plan.saved {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.btn-save-plan.saved:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-save-plan:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-save-plan svg {
+  font-size: 1.1em;
+}

@@ -1,0 +1,592 @@
+.routine-detail-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.routine-detail-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.routine-detail-header h1 {
+  font-size: 2.8em;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.routine-description {
+  font-size: 1.15em;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.header-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--on-background-color);
+}
+
+.category-badge.strength {
+  background-color: var(--color-strength-badge);
+}
+.category-badge.cardio {
+  background-color: var(--color-cardio-badge);
+}
+.category-badge.flexibility {
+  background-color: var(--color-flexibility-badge);
+}
+.category-badge.hybrid {
+  background-color: var(--color-hybrid-badge);
+}
+
+.difficulty-badge {
+  color: var(--on-background-color);
+}
+
+.difficulty-badge.principiante {
+  background-color: var(--color-difficulty-easy);
+}
+.difficulty-badge.intermedio {
+  background-color: var(--color-difficulty-medium);
+}
+.difficulty-badge.avanzado {
+  background-color: var(--color-difficulty-hard);
+}
+
+/* Goal badges */
+.goal-badge {
+  color: var(--on-background-color);
+}
+
+.goal-badge.muscle_gain {
+  background-color: #27ae60; /* Green for muscle gain (fuerza) */
+}
+
+.goal-badge.weight_loss {
+  background-color: #e74c3c; /* Red for weight loss (perder peso) */
+}
+
+.goal-badge.endurance {
+  background-color: #3498db; /* Blue for endurance */
+}
+
+.goal-badge.general_fitness {
+  background-color: #f39c12; /* Orange for general fitness */
+}
+
+.body-zone-badge {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-tertiary);
+}
+
+.start-workout-container {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.routine-detail-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.routine-detail-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.routine-detail-header h1 {
+  font-size: 2.8em;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.routine-description {
+  font-size: 1.15em;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.header-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--on-background-color);
+}
+
+.category-badge.strength {
+  background-color: #3498db; /* Blue */
+}
+.category-badge.cardio {
+  background-color: #e74c3c; /* Red */
+}
+.category-badge.flexibility {
+  background-color: var(--color-flexibility-badge);
+}
+.category-badge.hybrid {
+  background-color: var(--color-hybrid-badge);
+}
+
+.difficulty-badge {
+  color: var(--on-background-color);
+}
+
+.difficulty-badge.principiante {
+  background-color: var(--color-difficulty-easy);
+}
+.difficulty-badge.intermedio {
+  background-color: var(--color-difficulty-medium);
+}
+.difficulty-badge.avanzado {
+  background-color: var(--color-difficulty-hard);
+}
+
+/* Goal badges */
+.goal-badge {
+  color: var(--on-background-color);
+}
+
+.goal-badge.muscle_gain {
+  background-color: #27ae60; /* Green for muscle gain (fuerza) */
+}
+
+.goal-badge.weight_loss {
+  background-color: #e74c3c; /* Red for weight loss (perder peso) */
+}
+
+.goal-badge.endurance {
+  background-color: #3498db; /* Blue for endurance */
+}
+
+.goal-badge.general_fitness {
+  background-color: #f39c12; /* Orange for general fitness */
+}
+
+/* Body Zone Badges */
+.body-zone-badge.bodyzone-core {
+  background-color: #9b59b6; /* Purple for core */
+}
+.body-zone-badge.bodyzone-pecho {
+  background-color: #ff7f50; /* Coral */
+}
+.body-zone-badge.bodyzone-espalda {
+  background-color: #8a2be2; /* BlueViolet */
+}
+.body-zone-badge.bodyzone-hombros {
+  background-color: #00ced1; /* DarkTurquoise */
+}
+.body-zone-badge.bodyzone-brazos {
+  background-color: #ffa500; /* Orange */
+}
+.body-zone-badge.bodyzone-piernas {
+  background-color: #6a5acd; /* SlateBlue */
+}
+.body-zone-badge.bodyzone-gluteos {
+  background-color: #dc143c; /* Crimson */
+}
+.body-zone-badge.bodyzone-cuerpo-completo {
+  background-color: #20b2aa; /* LightSeaGreen */
+}
+.body-zone-badge.bodyzone-tren-superior {
+  background-color: #4682b4; /* SteelBlue */
+}
+.body-zone-badge.bodyzone-tren-inferior {
+  background-color: #d2691e; /* Chocolate */
+}
+
+.body-zone-badge {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-tertiary);
+}
+
+.start-workout-container {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.start-workout-button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--on-background-color);
+  background-color: #2ecc71; /* Green color for start workout button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  text-decoration: none; /* For Link component */
+  display: inline-block; /* For Link component */
+}
+
+.start-workout-button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+  transform: translateY(-3px);
+}
+
+.routine-exercises-list {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.routine-exercises-list h2 {
+  font-size: 2em;
+  color: var(--color-primary);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.exercise-item-wrapper {
+  margin-bottom: 15px;
+}
+
+.exercise-link-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-alt);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.exercise-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevation-low);
+  border-color: var(--color-accent);
+}
+
+.exercise-thumbnail {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.exercise-info {
+  flex-grow: 1;
+}
+
+.exercise-info h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  color: var(--color-text-primary);
+}
+
+.exercise-target {
+  font-size: 1em;
+  color: var(--color-text-secondary);
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation-low);
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.not-found-container h2 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+}
+
+.start-workout-button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+  transform: translateY(-3px);
+}
+
+.routine-exercises-list {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.routine-exercises-list h2 {
+  font-size: 2em;
+  color: var(--color-primary);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.exercise-item-wrapper {
+  margin-bottom: 15px;
+}
+
+.exercise-link-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-alt);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.exercise-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevation-low);
+  border-color: var(--color-accent);
+}
+
+.exercise-thumbnail {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.exercise-info {
+  flex-grow: 1;
+}
+
+.exercise-info h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  color: var(--color-text-primary);
+}
+
+.exercise-target {
+  font-size: 1em;
+  color: var(--color-text-secondary);
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation-low);
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.not-found-container h2 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+}
+
+/* Nuevos estilos para alternativas */
+.exercise-main-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alternatives-toggle-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.8rem;
+  margin-left: auto; /* Empuja el botón a la derecha */
+}
+
+.alternatives-toggle-btn:hover {
+  background: var(--color-surface-hover);
+}
+
+.alternatives-toggle-btn svg {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.alternatives-container {
+  background-color: var(--color-surface-inset);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border-light);
+}
+
+.alternatives-container h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.alternative-exercise-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.alternative-exercise-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.alternative-exercise-item:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.alternative-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.swap-btn {
+  margin-left: auto;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--color-primary);
+  color: var(--on-primary-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.swap-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.download-routine-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(5px);
+}
+
+.download-routine-btn:hover {
+  background: var(--color-primary);
+  color: #121212; /* Dark text for contrast on neon green */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.4);
+  border-color: var(--color-primary);
+}
+
+.download-routine-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.download-routine-btn svg {
+  font-size: 1.1em;
+}

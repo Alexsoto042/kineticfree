@@ -1,0 +1,244 @@
+/* ==========================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   Comprehensive accessibility improvements for better user experience
+   ========================================================================== */
+
+/* ==========================================================================
+   Reduced Motion Support
+   Respects user's motion preferences
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   High Contrast Mode Support
+   Improves visibility for users who need high contrast
+   ========================================================================== */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000000;
+    --color-text-secondary: #333333;
+    --shadow-elevation-low: none;
+    --shadow-elevation-medium: none;
+    --shadow-elevation-high: none;
+  }
+
+  html.dark {
+    --color-border: #ffffff;
+    --color-text-secondary: #cccccc;
+  }
+
+  .card-base {
+    border: 2px solid var(--color-border) !important;
+  }
+
+  .btn {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* ==========================================================================
+   Enhanced Focus Indicators
+   Clear focus states for keyboard navigation
+   ========================================================================== */
+:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Specific focus styles for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Screen Reader Only Content
+   Hide content visually but keep it accessible to screen readers
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ==========================================================================
+   Skip Links
+   Allow keyboard users to skip to main content
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 10000;
+  font-weight: 600;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Touch Target Sizing
+   Ensure all interactive elements meet minimum touch target size (44x44px)
+   ========================================================================== */
+@media (pointer: coarse) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  .btn,
+  .interactive {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ==========================================================================
+   Color Contrast Helpers
+   Ensure sufficient contrast for text readability
+   ========================================================================== */
+.text-high-contrast {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.bg-high-contrast {
+  background-color: var(--color-text-primary);
+  color: var(--color-surface);
+}
+
+/* ==========================================================================
+   Keyboard Navigation Indicators
+   Visual indicators for keyboard-only users
+   ========================================================================== */
+.keyboard-user *:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   ARIA Live Regions
+   Styling for dynamic content announcements
+   ========================================================================== */
+[aria-live="polite"],
+[aria-live="assertive"] {
+  position: relative;
+}
+
+/* ==========================================================================
+   Disabled State Accessibility
+   Clear visual indication of disabled elements
+   ========================================================================== */
+:disabled,
+[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Focus Within
+   Highlight containers when child elements receive focus
+   ========================================================================== */
+.focus-within-highlight:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   iOS Specific Fixes
+   Prevent zoom on input focus
+   ========================================================================== */
+@supports (-webkit-touch-callout: none) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ==========================================================================
+   Print Accessibility
+   Ensure content is accessible when printed
+   ========================================================================== */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

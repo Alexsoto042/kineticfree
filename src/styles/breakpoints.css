@@ -1,0 +1,145 @@
+/* ==========================================================================
+   BREAKPOINTS ESTANDARIZADOS
+   Sistema consistente de breakpoints para toda la aplicación
+   ========================================================================== */
+
+/*
+  BREAKPOINTS DEFINIDOS:
+  - Mobile:  < 640px  (smartphones)
+  - Tablet:  640px - 1023px (tablets y pantallas pequeñas)
+  - Desktop: 1024px - 1279px (laptops y monitores estándar)
+  - Large:   >= 1280px (monitores grandes y 4K)
+*/
+
+:root {
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1280px;
+}
+
+/* ==========================================================================
+   MOBILE FIRST - Base styles (< 640px)
+   Estilos base optimizados para móviles
+   ========================================================================== */
+
+/* Los estilos base en index.css ya están optimizados para móvil */
+
+/* ==========================================================================
+   TABLET - (640px - 1023px)
+   Ajustes para tablets y pantallas medianas
+   ========================================================================== */
+@media (min-width: 640px) {
+  :root {
+    --font-size-p: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Grid de 2 columnas para tablets */
+  .exercise-list,
+  .routine-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   DESKTOP - (1024px+)
+   Ajustes para laptops y monitores estándar
+   ========================================================================== */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+
+  /* Grid de 3 columnas para desktop */
+  .exercise-list,
+  .routine-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Mostrar navegación desktop */
+  .desktop-nav {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   LARGE SCREENS - (1280px+)
+   Ajustes para monitores grandes y 4K
+   ========================================================================== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  /* Grid de 4 columnas para pantallas grandes */
+  .exercise-list,
+  .routine-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Aumentar espaciado en pantallas grandes */
+  :root {
+    --spacing-xl: 2.5rem;
+    --spacing-xxl: 4rem;
+  }
+}
+
+/* ==========================================================================
+   LANDSCAPE ORIENTATION
+   Ajustes específicos para orientación horizontal
+   ========================================================================== */
+@media (max-width: 1023px) and (orientation: landscape) {
+  /* Reducir altura de header en landscape móvil */
+  .app-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  /* Optimizar uso de espacio vertical */
+  main {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+}
+
+/* ==========================================================================
+   PRINT MEDIA
+   Estilos optimizados para impresión
+   ========================================================================== */
+@media print {
+  .no-print,
+  .app-header,
+  .bottom-nav-bar,
+  .fab,
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .card-base {
+    border: 1px solid #000;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}

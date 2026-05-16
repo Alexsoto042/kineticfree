@@ -1,0 +1,68 @@
+/* src/pages/ExerciseAdmin.css */
+
+.exercise-admin-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.exercise-admin-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-text-primary);
+}
+
+.exercise-list-admin {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.exercise-admin-item {
+  background-color: var(--color-surface);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.exercise-admin-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.exercise-admin-details {
+  flex-grow: 1;
+}
+
+.exercise-admin-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+.exercise-admin-details p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.exercise-admin-actions button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.exercise-admin-actions button:hover {
+  background-color: var(--color-primary-dark);
+}

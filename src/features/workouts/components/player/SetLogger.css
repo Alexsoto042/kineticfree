@@ -1,0 +1,44 @@
+/* src/components/workout_player/SetLogger.css */
+
+.set-history {
+  margin-bottom: var(--spacing-lg);
+}
+
+.set-history h4 {
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+
+.set-history ul {
+  list-style: none;
+  max-height: 150px; /* Allow scrolling for many sets */
+  overflow-y: auto;
+}
+
+.set-history li {
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-background);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+}
+
+.set-log-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.set-log-form .form-row {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .set-log-form .form-row {
+    flex-direction: column;
+  }
+}

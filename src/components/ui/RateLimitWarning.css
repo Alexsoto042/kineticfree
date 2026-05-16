@@ -1,0 +1,138 @@
+/* Rate Limit Warning Styles */
+
+.rate-limit-warning {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  animation: slideIn 0.3s ease-out;
+}
+
+.rate-limit-warning--warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #856404;
+}
+
+.rate-limit-warning--error {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #721c24;
+}
+
+.rate-limit-warning__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.rate-limit-warning__content {
+  flex: 1;
+}
+
+.rate-limit-warning__title {
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.rate-limit-warning__message {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rate-limit-warning__message strong {
+  font-weight: 600;
+}
+
+.rate-limit-warning__footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.rate-limit-warning__reset {
+  font-size: 12px;
+}
+
+/* Rate Limit Badge */
+
+.rate-limit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.rate-limit-badge--warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.rate-limit-badge--danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.rate-limit-badge__count {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rate-limit-badge__label {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* Animations */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .rate-limit-warning--warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+  }
+
+  .rate-limit-warning--error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: rgba(220, 53, 69, 0.3);
+    color: #dc3545;
+  }
+
+  .rate-limit-badge {
+    background-color: rgba(25, 118, 210, 0.2);
+    color: #64b5f6;
+  }
+
+  .rate-limit-badge--warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+  }
+
+  .rate-limit-badge--danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ef5350;
+  }
+}

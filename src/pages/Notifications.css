@@ -1,0 +1,12 @@
+.notifications-page {
+  min-height: 100vh;
+  background: var(--background-primary);
+  padding-top: 1rem;
+  padding-bottom: 80px; /* Space for bottom nav */
+}
+
+@media (max-width: 768px) {
+  .notifications-page {
+    padding-top: 0.5rem;
+  }
+}

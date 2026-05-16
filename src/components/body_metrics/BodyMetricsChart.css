@@ -1,0 +1,57 @@
+/* src/components/body_metrics/BodyMetricsChart.css */
+
+.body-metrics-chart-container {
+  background-color: var(--color-background-soft);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.body-metrics-chart-container h3 {
+  margin-top: 0;
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.chart-filters {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-filters label {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.chart-filters select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+}
+
+/* Recharts specific overrides if needed */
+.recharts-wrapper .recharts-cartesian-axis-tick-value {
+  fill: var(--color-text-secondary);
+}
+
+.recharts-wrapper .recharts-legend-item-text {
+  color: var(--color-text-primary) !important;
+  text-transform: capitalize;
+}
+
+.recharts-wrapper .recharts-tooltip-wrapper {
+  border-radius: 5px;
+  border: 1px solid var(--color-border) !important;
+  background-color: var(--color-background) !important;
+}
+
+.recharts-wrapper .recharts-tooltip-label {
+  color: var(--color-text-primary) !important;
+  font-weight: 600;
+}

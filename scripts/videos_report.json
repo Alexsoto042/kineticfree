@@ -1,0 +1,211 @@
+{
+  "timestamp": "2025-11-26T00:17:47.240Z",
+  "total": 29,
+  "success": 29,
+  "failed": 0,
+  "results": [
+    {
+      "filename": " Extensión de Cuádriceps (Leg Extension).mp4",
+      "exerciseId": 66,
+      "exerciseName": " Extensión de Cuádriceps (Leg Extension)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_66.webm"
+    },
+    {
+      "filename": "Aperturas con Mancuernas.mp4",
+      "exerciseId": 73,
+      "exerciseName": "Aperturas con Mancuernas",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_73.webm"
+    },
+    {
+      "filename": "Aperturas en Máquina (Chest Fly).mp4",
+      "exerciseId": 65,
+      "exerciseName": "Aperturas en Máquina (Chest Fly)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_65.webm"
+    },
+    {
+      "filename": "Caminadora (Inclinación).mp4",
+      "exerciseId": 35,
+      "exerciseName": "Caminadora (Inclinación)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_35.webm"
+    },
+    {
+      "filename": "Curl Femoral (Leg Curl).mp4",
+      "exerciseId": 67,
+      "exerciseName": "Curl Femoral (Leg Curl)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_67.webm"
+    },
+    {
+      "filename": "Curl de Bíceps en Máquina.mp4",
+      "exerciseId": 69,
+      "exerciseName": "Curl de Bíceps en Máquina",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_69.webm"
+    },
+    {
+      "filename": "Elevaciones Laterales con Mancuernas.mp4",
+      "exerciseId": 74,
+      "exerciseName": "Elevaciones Laterales con Mancuernas",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_74.webm"
+    },
+    {
+      "filename": "Elevaciones de Piernas Colgado.mp4",
+      "exerciseId": 78,
+      "exerciseName": "Elevaciones de Piernas Colgado",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_78.webm"
+    },
+    {
+      "filename": "Elevación de Gemelos en Máquina.mp4",
+      "exerciseId": 71,
+      "exerciseName": "Elevación de Gemelos en Máquina",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_71.webm"
+    },
+    {
+      "filename": "Estiramiento de Cuádriceps.mp4",
+      "exerciseId": 19,
+      "exerciseName": "Estiramiento de Cuádriceps",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_19.webm"
+    },
+    {
+      "filename": "Estiramiento de Pecho.mp4",
+      "exerciseId": 20,
+      "exerciseName": "Estiramiento de Pecho",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_20.webm"
+    },
+    {
+      "filename": "Face Pulls.mp4",
+      "exerciseId": 79,
+      "exerciseName": "Face Pulls",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_79.webm"
+    },
+    {
+      "filename": "Hip Thrust con Barra.mp4",
+      "exerciseId": 25,
+      "exerciseName": "Hip Thrust con Barra",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_25.webm"
+    },
+    {
+      "filename": "Hip Thrust.mp4",
+      "exerciseId": 80,
+      "exerciseName": "Hip Thrust",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_80.webm"
+    },
+    {
+      "filename": "Jalón al Pecho (Lat Pulldown).mp4",
+      "exerciseId": 26,
+      "exerciseName": "Jalón al Pecho (Lat Pulldown)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_26.webm"
+    },
+    {
+      "filename": "Peso Muerto Rumano.mp4",
+      "exerciseId": 76,
+      "exerciseName": "Peso Muerto Rumano",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_76.webm"
+    },
+    {
+      "filename": "Plancha Lateral (Side Plank).mp4",
+      "exerciseId": 22,
+      "exerciseName": "Plancha Lateral (Side Plank)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_22.webm"
+    },
+    {
+      "filename": "Press Inclinado con Mancuernas.mp4",
+      "exerciseId": 72,
+      "exerciseName": "Press Inclinado con Mancuernas",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_72.webm"
+    },
+    {
+      "filename": "Press de Banca (10x10).mp4",
+      "exerciseId": 37,
+      "exerciseName": "Press de Banca (10x10)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_37.webm"
+    },
+    {
+      "filename": "Press de Banca con Barra.mp4",
+      "exerciseId": 23,
+      "exerciseName": "Press de Banca con Barra",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_23.webm"
+    },
+    {
+      "filename": "Press de Hombros en Máquina.mp4",
+      "exerciseId": 68,
+      "exerciseName": "Press de Hombros en Máquina",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_68.webm"
+    },
+    {
+      "filename": "Pushdown de Tríceps en Polea.mp4",
+      "exerciseId": 70,
+      "exerciseName": "Pushdown de Tríceps en Polea",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_70.webm"
+    },
+    {
+      "filename": "Remo Sentado en Cable.mp4",
+      "exerciseId": 64,
+      "exerciseName": "Remo Sentado en Cable",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_64.webm"
+    },
+    {
+      "filename": "Remo con Barra (10x10).mp4",
+      "exerciseId": 38,
+      "exerciseName": "Remo con Barra (10x10)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_38.webm"
+    },
+    {
+      "filename": "Remo con Barra.mp4",
+      "exerciseId": 33,
+      "exerciseName": "Remo con Barra",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_33.webm"
+    },
+    {
+      "filename": "Remo con Mancuerna (Serrucho).mp4",
+      "exerciseId": 75,
+      "exerciseName": "Remo con Mancuerna (Serrucho)",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_75.webm"
+    },
+    {
+      "filename": "Swing con Kettlebell.mp4",
+      "exerciseId": 27,
+      "exerciseName": "Swing con Kettlebell",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_27.webm"
+    },
+    {
+      "filename": "ancada Búlgara.mp4",
+      "exerciseId": 77,
+      "exerciseName": "ancada Búlgara",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_77.webm"
+    },
+    {
+      "filename": "stiramientos Dinámicos.mp4",
+      "exerciseId": 36,
+      "exerciseName": "stiramientos Dinámicos",
+      "status": "success",
+      "url": "https://owijgknqpifasqmvccpj.supabase.co/storage/v1/object/public/exercise_images/gifs/exercise_36.webm"
+    }
+  ]
+}

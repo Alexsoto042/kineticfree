@@ -1,0 +1,149 @@
+/* --- Base Styles (Shared) --- */
+.dropdown,
+.collapsible-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Dropdown Variant Styles --- */
+.dropdown-trigger {
+  cursor: pointer;
+  /* Add hover styles here */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-trigger:hover {
+  background-color: var(--color-background); /* Use a subtle background change */
+  color: var(--color-text-primary); /* Ensure text color changes */
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: var(--color-surface);
+  min-width: 180px; /* Slightly wider */
+  box-shadow: var(--shadow-elevation-medium);
+  z-index: 50; /* Ensure it's above other content */
+  border-radius: 8px;
+  overflow: hidden;
+  top: 100%;
+  left: 0; /* Align with trigger */
+  margin-top: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem; /* Add some padding */
+}
+
+.dropdown-item {
+  color: var(--color-text-primary);
+  padding: 10px 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Consistent gap */
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 6px; /* Rounded items */
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-primary); /* Use app's primary green */
+  color: #000; /* Black text for contrast, like primary buttons */
+}
+
+.dropdown-item.active {
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.dropdown-item.button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.dropdown-item-icon {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-separator {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0.5rem 0;
+}
+
+
+/* --- Collapsible Variant Styles --- */
+.collapsible-menu {
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.collapsible-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  color: var(--on-surface-color);
+}
+
+.collapsible-trigger .trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.collapsible-trigger .chevron {
+  transition: transform 0.2s ease-in-out;
+}
+
+.collapsible-trigger .chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  padding: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.collapsible-content.is-open {
+  max-height: 500px;
+}
+
+.collapsible-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 40px;
+}
+
+.collapsible-nav-link:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.collapsible-nav-link.active {
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+  font-weight: 500;
+}

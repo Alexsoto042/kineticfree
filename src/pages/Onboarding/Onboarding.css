@@ -1,0 +1,60 @@
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.onboarding-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+}
+
+.step-content {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.step-container h3 {
+  margin-bottom: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.option-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.option-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.option-card.selected {
+  background-color: rgba(var(--color-primary-rgb), 0.15);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: bold;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation-low);
+}

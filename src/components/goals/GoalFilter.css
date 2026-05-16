@@ -1,0 +1,143 @@
+/* src/components/GoalFilter.css */
+.goal-filter-container {
+  /* Mimic filters-container-group */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.goal-filter-container h3 {
+  color: var(--color-text-primary); /* Assuming this variable exists */
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-bottom: 1px solid var(--border-color); /* Use border-color from App.css */
+  padding-bottom: 10px;
+}
+
+/* src/components/GoalFilter.css */
+.goal-filter-container {
+  /* Mimic filters-container-group */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.goal-filter-container h3 {
+  color: var(--color-text-primary); /* Assuming this variable exists */
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-bottom: 1px solid var(--color-border); /* Use border-color from App.css */
+  padding-bottom: 10px;
+}
+
+.goal-buttons {
+  /* Mimic filter-btn */
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.goal-buttons button.active {
+  /* Mimic filter-btn.active */
+  background-color: var(--color-primary);
+  color: var(--on-background-color);
+  border-color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.goal-buttons button:hover {
+  /* Mimic filter-btn:hover */
+  background-color: var(--color-primary-hover);
+  color: var(--on-background-color);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+/* Responsive adjustments - mimic App.css media queries */
+@media (max-width: 768px) {
+  .goal-buttons {
+    gap: 0.5rem; /* Smaller gap for smaller screens */
+  }
+  .goal-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .goal-buttons {
+    flex-direction: column;
+  }
+  .goal-buttons button {
+    width: 100%;
+  }
+}
+
+.goal-buttons button {
+  /* Mimic filter-btn */
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.goal-buttons button.active {
+  /* Mimic filter-btn.active */
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.goal-buttons button:hover {
+  /* Mimic filter-btn:hover */
+  background-color: var(--color-primary-hover);
+  color: var(--color-background);
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments - mimic App.css media queries */
+@media (max-width: 768px) {
+  .goal-buttons {
+    gap: 0.5rem; /* Smaller gap for smaller screens */
+  }
+  .goal-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .goal-buttons {
+    flex-direction: column;
+  }
+  .goal-buttons button {
+    width: 100%;
+  }
+}

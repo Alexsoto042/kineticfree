@@ -1,0 +1,3 @@
+ALTER TABLE motivational_posts
+ADD COLUMN likes INTEGER DEFAULT 0,
+ADD COLUMN liked_by UUID[] DEFAULT ARRAY[]::UUID[];

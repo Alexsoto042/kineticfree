@@ -1,0 +1,9 @@
+.workout-summary-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-elevation-low);
+}

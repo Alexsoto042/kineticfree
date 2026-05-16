@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Flexiones de Pecho",
+    "description": "Ejercicio clásico para fortalecer el pecho, hombros y tríceps.",
+    "instructions": [
+      "Colócate boca abajo con las manos un poco más anchas que los hombros.",
+      "Baja el cuerpo hasta que el pecho casi toque el suelo.",
+      "Empuja hacia arriba hasta la posición inicial."
+    ],
+    "category": "strength",
+    "image": "https://example.com/images/flexiones.jpg",
+    "body_zone": ["pecho", "hombros", "triceps"],
+    "youtube_url": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+    "calories_burned_per_minute": 8,
+    "benefits": "Fortalece la parte superior del cuerpo, mejora la resistencia muscular y la estabilidad del core."
+  },
+  {
+    "id": 2,
+    "name": "Sentadillas",
+    "description": "Ejercicio fundamental para fortalecer las piernas y los glúteos.",
+    "instructions": [
+      "Ponte de pie con los pies al ancho de los hombros.",
+      "Baja las caderas como si fueras a sentarte en una silla.",
+      "Mantén la espalda recta y el pecho erguido.",
+      "Vuelve a la posición inicial."
+    ],
+    "category": "strength",
+    "image": "https://example.com/images/sentadillas.jpg",
+    "body_zone": ["piernas", "gluteos", "core"],
+    "youtube_id": "ultWfYNEkU8",
+    "calories_burned_per_minute": 10,
+    "benefits": "Desarrolla fuerza en las piernas, mejora la movilidad de la cadera y fortalece la cadena posterior."
+  },
+  {
+    "id": 3,
+    "name": "Burpees",
+    "description": "Ejercicio de cuerpo completo que combina sentadilla, flexión y salto.",
+    "instructions": [
+      "Comienza de pie, baja a una sentadilla y coloca las manos en el suelo.",
+      "Lanza los pies hacia atrás para quedar en posición de flexión.",
+      "Haz una flexión (opcional).",
+      "Salta con los pies hacia las manos y luego salta explosivamente hacia arriba."
+    ],
+    "category": "cardio",
+    "image": "https://example.com/images/burpees.jpg",
+    "body_zone": ["cuerpo completo"],
+    "youtube_id": "dZgkf111111",
+    "calories_burned_per_minute": 12,
+    "benefits": "Mejora la resistencia cardiovascular, quema muchas calorías y trabaja múltiples grupos musculares."
+  },
+  {
+    "id": 4,
+    "name": "Plancha",
+    "description": "Ejercicio isométrico para fortalecer el core.",
+    "instructions": [
+      "Apóyate en los antebrazos y las puntas de los pies.",
+      "Mantén el cuerpo recto desde la cabeza hasta los talones.",
+      "Contrae el abdomen y los glúteos."
+    ],
+    "category": "flexibility",
+    "image": "https://example.com/images/plancha.jpg",
+    "body_zone": ["core", "abdomen"],
+    "youtube_id": "Tj_G_F-11111",
+    "calories_burned_per_minute": 5,
+    "benefits": "Fortalece el core, mejora la postura y reduce el riesgo de lesiones de espalda."
+  }
+]

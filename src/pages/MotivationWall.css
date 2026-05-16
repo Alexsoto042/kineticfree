@@ -1,0 +1,154 @@
+/* Base styles for the motivation wall layout */
+.motivation-wall-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Fixed width for left, flexible for right */
+  gap: 1.5rem; /* Space between columns */
+  padding: 1.5rem; /* Padding around the whole layout */
+  height: calc(100vh - var(--header-height) - var(--bottom-nav-height)); /* Adjust based on actual header/nav height */
+  max-width: 1400px; /* Max width for the content */
+  margin: 0 auto; /* Center the layout */
+  overflow: hidden; /* Prevent unwanted scrollbars on the main layout */
+}
+
+/* Styles for the left column (Post Creator) */
+.motivation-wall-left-column {
+  position: sticky; /* Keep it fixed while the right column scrolls */
+  top: 1.5rem; /* Position relative to its parent, adjust as needed */
+  height: fit-content; /* Only take the height of its content */
+  max-height: calc(100vh - var(--header-height) - var(--bottom-nav-height) - 3rem); /* Ensure it doesn't overflow its parent */
+  overflow-y: auto; /* Allow scrolling within the left column if its content is too tall */
+  padding-bottom: 1.5rem; /* Space at the bottom */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.motivation-wall-left-column::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+/* Styles for the right column (Posts Feed) */
+.motivation-wall-right-column {
+  overflow-y: auto; /* Allow the posts grid to scroll */
+  padding-bottom: 1.5rem; /* Space at the bottom of the scrollable content */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.motivation-wall-right-column::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+/* Header within the right column */
+.motivation-wall-header {
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem; /* Space below the header before posts */
+  color: var(--color-text-primary);
+  background-color: var(--color-background); /* Ensure header has a background */
+  z-index: 10; /* Ensure header is above scrolling content if it becomes sticky */
+  position: sticky;
+  top: 0;
+}
+
+.motivation-wall-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid for displaying individual posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive 2-column grid */
+  gap: 1.5rem; /* Space between post cards */
+}
+
+/* Styles for the like button */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease-in-out;
+}
+
+.like-button:hover {
+  color: var(--color-primary);
+}
+
+.like-button.liked svg {
+  fill: var(--color-danger);
+  stroke: var(--color-danger);
+}
+
+.like-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.likes-count {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* Styles for loading, error, and empty states */
+.loading-state,
+.error-state,
+.empty-state {
+  grid-column: 1 / -1; /* Make these elements span across all columns */
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-elevation-low);
+  color: var(--color-text-secondary);
+  margin: 1rem; /* Margin around the state cards */
+}
+
+.empty-state p,
+.loading-state p,
+.error-state p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .motivation-wall-layout {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    padding: 1rem;
+    gap: 1rem;
+    height: auto; /* Allow height to adjust */
+  }
+
+  .motivation-wall-left-column {
+    position: relative; /* Remove sticky behavior */
+    top: auto;
+    height: auto;
+    max-height: none; /* Remove max-height constraint */
+    overflow-y: visible; /* Show scrollbar if present */
+    padding-bottom: 0; /* Remove extra padding */
+  }
+
+  .motivation-wall-right-column {
+    padding-bottom: 0; /* Remove extra padding */
+    overflow-y: visible; /* Show scrollbar if present */
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr; /* Single column for posts on mobile */
+  }
+
+  .motivation-wall-header h1 {
+    font-size: 1.5rem;
+  }
+}
+

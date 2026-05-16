@@ -1,0 +1,195 @@
+.motivation-post-card {
+  background-color: var(--color-surface);
+  border-radius: 16px; /* More rounded */
+  box-shadow: var(--shadow-elevation-high); /* More prominent shadow */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border: 1px solid var(--color-border); /* Subtle border for definition */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.post-header .author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem;
+  border: 2px solid var(--color-primary);
+}
+
+.author-name-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.author-name-link:hover .author-name {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.post-header .author-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+}
+
+.post-media-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80%; /* Adjusted aspect ratio for a taller container (e.g., 5:4) */
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-secondary); /* For no media placeholder */
+  /* Remove border-radius here as it's on the main card */
+}
+
+.post-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Default for images */
+}
+
+.post-media.video-element {
+  object-fit: contain; /* Ensure videos are not cropped */
+}
+
+.no-media-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+}
+
+.post-description-card {
+  background-color: var(--color-background-alt, var(--color-background)); /* Slightly different background, fallback */
+  padding: 1rem;
+  margin: 0.5rem 1rem 1rem 1rem; /* More separation from media */
+  border-radius: 12px; /* More rounded than before */
+  box-shadow: var(--shadow-elevation-low);
+  text-align: left;
+  border: 1px solid var(--color-border); /* Explicit border for separation */
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+
+.post-caption {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  border-radius: 0 0 16px 16px; /* Match main card's bottom rounding */
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.like-button,
+.comment-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  color: var(--color-text-secondary);
+}
+
+.like-button:hover,
+.comment-button:hover {
+  background-color: var(--color-background-alt, rgba(0, 0, 0, 0.05));
+}
+
+.like-button.liked {
+  color: red;
+}
+
+.likes-count,
+.comment-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.delete-post-btn {
+  background-color: var(--color-error);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.delete-post-btn:hover {
+  background-color: var(--color-error-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .motivation-post-card {
+    margin-bottom: 1rem;
+  }
+  .post-header {
+    padding: 0.75rem;
+  }
+  .post-header .author-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  .post-header .author-name {
+    font-size: 0.9rem;
+  }
+  .post-description-card {
+    margin: 0.5rem 0.75rem 0.75rem 0.75rem;
+    padding: 0.75rem;
+  }
+  .post-caption {
+    font-size: 0.9rem;
+  }
+  .post-footer {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  .delete-post-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}

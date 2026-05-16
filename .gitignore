@@ -1,0 +1,59 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.env
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Test files
+src/components/ExerciseDetail.test.tsx
+tests/workout-player.spec.ts
+
+# Archivos temporales y documentación local
+*.txt
+!instructions.txt
+*.md
+!README.md
+!supabase/migrations/README_MIGRATIONS.md
+
+# Videos en carpeta public
+public/**/*.mp4
+public/**/*.webm
+public/**/*.mov
+public/**/*.avi
+
+# Videos generados por scripts (muy pesados, están en la base de datos)
+scripts/videos_to_convert/**/*.mp4
+scripts/videos_to_convert/**/*.webm
+scripts/videos_to_convert/**/*.mov
+scripts/videos_to_convert/**/*.avi
+scripts/converted_webm/**/*.webm
+scripts/converted_webm/**/*.mp4
+
+# Antigravity artifacts (solo local)
+.gemini/

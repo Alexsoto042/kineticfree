@@ -1,0 +1,71 @@
+-- ============================================
+-- VERIFICAR QUÉ EJERCICIOS YA EXISTEN
+-- ============================================
+
+-- Ver cuáles de los 30 ejercicios propuestos ya existen
+SELECT name FROM exercises WHERE name IN (
+  'Flexiones Diamante (Diamond Push-ups)',
+  'Flexiones Declinadas (Decline Push-ups)',
+  'Flexiones con Palmada (Clap Push-ups)',
+  'Press de Banca Declinado',
+  'Pullover con Mancuerna',
+  'Dominadas Australianas (Australian Pull-ups)',
+  'Superman',
+  'Remo Invertido (Inverted Row)',
+  'Pulldown con Agarre Cerrado',
+  'Peso Muerto Sumo',
+  'Pike Push-ups',
+  'Elevaciones Frontales con Mancuernas',
+  'Pájaros (Rear Delt Fly)',
+  'Arnold Press',
+  'Fondos en Banco (Bench Dips)',
+  'Curl Martillo (Hammer Curl)',
+  'Curl Concentrado (Concentration Curl)',
+  'Curl 21s',
+  'Extensión de Tríceps Acostado (Skull Crushers)',
+  'Tríceps Kickback',
+  'Sentadilla Búlgara con Salto',
+  'Pistol Squat (Sentadilla a Una Pierna)',
+  'Sentadilla Frontal (Front Squat)',
+  'Hack Squat',
+  'Prensa de Piernas (Leg Press)',
+  'Zancadas con Mancuernas (Dumbbell Lunges)',
+  'Plancha Lateral (Side Plank)',
+  'Mountain Climbers (Escaladores)',
+  'Ab Wheel Rollout (Rueda Abdominal)',
+  'Cable Crunch (Abdominales en Polea)'
+);
+
+-- Contar cuántos ya existen
+SELECT COUNT(*) as ejercicios_existentes FROM exercises WHERE name IN (
+  'Flexiones Diamante (Diamond Push-ups)',
+  'Flexiones Declinadas (Decline Push-ups)',
+  'Flexiones con Palmada (Clap Push-ups)',
+  'Press de Banca Declinado',
+  'Pullover con Mancuerna',
+  'Dominadas Australianas (Australian Pull-ups)',
+  'Superman',
+  'Remo Invertido (Inverted Row)',
+  'Pulldown con Agarre Cerrado',
+  'Peso Muerto Sumo',
+  'Pike Push-ups',
+  'Elevaciones Frontales con Mancuernas',
+  'Pájaros (Rear Delt Fly)',
+  'Arnold Press',
+  'Fondos en Banco (Bench Dips)',
+  'Curl Martillo (Hammer Curl)',
+  'Curl Concentrado (Concentration Curl)',
+  'Curl 21s',
+  'Extensión de Tríceps Acostado (Skull Crushers)',
+  'Tríceps Kickback',
+  'Sentadilla Búlgara con Salto',
+  'Pistol Squat (Sentadilla a Una Pierna)',
+  'Sentadilla Frontal (Front Squat)',
+  'Hack Squat',
+  'Prensa de Piernas (Leg Press)',
+  'Zancadas con Mancuernas (Dumbbell Lunges)',
+  'Plancha Lateral (Side Plank)',
+  'Mountain Climbers (Escaladores)',
+  'Ab Wheel Rollout (Rueda Abdominal)',
+  'Cable Crunch (Abdominales en Polea)'
+);
