@@ -3,30 +3,30 @@
 
   # Kinetic: Open-Source Fitness OS 🚀
 
-  **Kinetic** es un sistema operativo integral para el seguimiento de tu actividad física, diseñado para ser rápido, limpio y completamente gratuito para desplegar. 
+  **Kinetic** es un sistema operativo integral para el seguimiento de tu actividad física, diseñado para ser rápido, limpio y construido por la comunidad. 
   
 </div>
 
 ---
 
-## 💡 ¿Por qué Kinetic?
+## 💡 Nuestra Misión
 
-La mayoría de las aplicaciones de fitness te cobran una suscripción mensual solo por registrar lo que comes o tus rutinas de gimnasio. Diseñé Kinetic como una alternativa **100% Open-Source** y gratuita. 
+La mayoría de las aplicaciones de fitness te cobran una suscripción mensual solo por registrar lo que comes o tus rutinas de gimnasio. Kinetic nace como una alternativa **100% Open-Source** y gratuita. 
 
-Puedes usarlo, aprender de su código, o desplegar tu propia instancia privada con cero costos de servidor.
+**Nuestro objetivo no es solo que copies esta app**, sino crear una comunidad de desarrolladores que colaboren para mejorarla. Queremos construir la mejor herramienta de fitness de código abierto, añadiendo nuevas funciones, optimizando el rendimiento y aportando ideas juntos.
 
 ---
 
 ## 🏗 Arquitectura del Proyecto
 
-Kinetic utiliza un stack moderno y escalable que permite alojarlo gratuitamente:
+Kinetic utiliza un stack moderno y escalable:
 
-- **Frontend (Vercel):** Construido con **React 19 + Vite + TypeScript**. Se despliega en la red global de Vercel para una velocidad extrema.
-- **Backend y Base de Datos (Supabase):** Utiliza **Supabase** (PostgreSQL) para la autenticación segura, base de datos en tiempo real y almacenamiento (Storage).
+- **Frontend:** Construido con **React 19 + Vite + TypeScript**.
+- **Backend y Base de Datos:** Utiliza **Supabase** (PostgreSQL) para la autenticación segura, base de datos en tiempo real y almacenamiento (Storage).
 
 ```mermaid
 graph LR
-    A[Usuario / Navegador] --> B(Vercel Frontend - React)
+    A[Usuario / Navegador] --> B(Frontend - React)
     B --> C{Supabase Backend}
     C --> D[PostgreSQL DB]
     C --> E[Autenticación]
@@ -45,21 +45,11 @@ graph LR
 
 ---
 
-## 🚀 Despliegue Rápido (Tu propio Kinetic)
+## 🛠 Instalación Local (Para Colaboradores)
 
-Puedes tener tu propia instancia de Kinetic corriendo en 5 minutos:
+Si deseas unirte al proyecto y aportar tu código:
 
-1. Crea un proyecto gratuito en [Supabase](https://supabase.com/).
-2. Ejecuta el archivo `database_setup.sql` en el SQL Editor de Supabase.
-3. Haz clic en el botón de **Deploy to Vercel** de arriba e ingresa tus llaves de Supabase (`VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`) cuando se te solicite.
-
----
-
-## 🛠 Instalación Local (Para Desarrolladores)
-
-Si deseas modificar el código o contribuir:
-
-1. Clona el repositorio:
+1. Haz un *Fork* y luego clona tu repositorio:
    ```bash
    git clone https://github.com/TU-USUARIO/kinetic.git
    cd kinetic
@@ -68,9 +58,9 @@ Si deseas modificar el código o contribuir:
    ```bash
    npm install
    ```
-3. Configura tus variables de entorno:
+3. Configura tus variables de entorno (necesitarás crear un proyecto gratuito en Supabase y ejecutar `database_setup.sql` en su SQL Editor para tener tu entorno local de pruebas):
    - Copia el archivo `.env.example` y renómbralo a `.env`.
-   - Agrega tus credenciales de Supabase.
+   - Agrega tus credenciales locales/de prueba de Supabase.
 4. Inicia el servidor de desarrollo:
    ```bash
    npm run dev
@@ -79,8 +69,12 @@ Si deseas modificar el código o contribuir:
 
 ---
 
-## 🤝 Contribuir
+## 🤝 Cómo Contribuir
 
-¡Las contribuciones, reportes de bugs y sugerencias son siempre bienvenidos! Únete a nuestra comunidad si deseas aportar nuevas ideas.
+¡Este proyecto está vivo gracias a la comunidad! Hay muchas formas en las que puedes ayudar a mejorarlo:
 
-> ¿Necesitas un software a medida para tu negocio, gimnasio o clínica? [Contáctame aquí](https://tu-sitio-web-o-whatsapp.com) para servicios de desarrollo profesional.
+1. **Reportando Bugs:** Si encuentras un error o algo que no funciona bien en el diseño, abre un *Issue* describiendo el problema.
+2. **Proponiendo Funciones:** ¿Tienes una idea genial? Abre un *Issue* para discutirla con los demás desarrolladores.
+3. **Escribiendo Código:** Revisa los *Issues* abiertos y envía un *Pull Request* (PR) con tus mejoras. Toda ayuda es bienvenida, desde corrección de estilos CSS hasta integraciones complejas de backend.
+
+> ¿Necesitas un software a medida para tu negocio, gimnasio o clínica? [Contáctame aquí](https://portafolio.alexsoto042.org) para servicios de desarrollo profesional.
